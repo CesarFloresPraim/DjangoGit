@@ -21,7 +21,7 @@ class Istore(TemplateView):
     template_name = 'FirstDjangoApp/verticalNav.html'
 
     def get(self, request, *args, **kwargs):
-
+        # Prueba para GIT
         if 'usuario' in request.session:
             usuario = request.session['usuario']
             usuarios = Administrador.objects.get(usuario__exact=usuario)
