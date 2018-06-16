@@ -1,0 +1,47 @@
+{% load staticfiles %}
+
+<div class="container-fluid" style="height: 100%">
+    <div class="row" style="height: 100%">
+        <div class="col-md-8 left-ventas" style="background: rgba(91,128,178,0.11)" id="left-container">
+            <div class="elementos-ventas" id="elementos-ventas">
+                <form action="{% url 'FirstDjangoApp:buscar_articulos' %}" method="get" id="buscar-articulos">
+                    <input type="text" name="buscar-articulos" placeholder="Buscar"
+                           style="margin-bottom: 20px" onclick="ajustarAlturaArticulos()" onkeyup="buscarArticulos()" autocomplete="off">
+                    <button type="submit">Buscar</button>
+                </form>
+            </div>
+            <div id="articulos-encontrados">
+
+            </div>
+        </div>
+        <div class="col-md-4 right-ventas" style="background: rgba(51,217,178,0.11)">
+            <h3 style="margin-top: 20px">VENTAS</h3>
+            <form action="{% url 'FirstDjangoApp:registrar_venta' %}" method="post" id="registrar-venta">
+                {% csrf_token %}
+
+                <table class="table-hover" style="width: 100%" id="tablee-ventas">
+                    <tr>
+                        <th style="background: rgba(217,0,9,0.2)">X</th>
+                        <th style="background: rgba(51,217,178,0.20)">#</th>
+                        <th style="background: rgba(51,217,178,0.20)">Descripcion</th>
+                        <th style="background: rgba(51,217,178,0.20)">Precio</th>
+                    </tr>
+                </table>
+                <div id="calculos"
+                     style="display: block; text-align: right; position: absolute; bottom: 15px; right: 0">
+                    <div style="display: block; text-align: right">
+                        <select id="metodo_de_pago">
+                            <option value="Efectivo">Efectivo</option>
+                            <option value="Tarjeta">Tarjeta</option>
+                        </select>
+                        <button type="submit">Pagar</button>
+                        <label for="total_show">Total:</label>
+                        <input type="text" name="total_venta" id="total_venta" readonly placeholder=""
+                               style="background: rgba(46,204,113,0.6)">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,47 @@
+{% load staticfiles %}
+<div class="container-fluid">
+    <div class="row" id="row-empleados">
+
+    </div>
+</div>
+
+<div id="detalles-empleado" class="container-fluid">
+    <i class="far fa-times-circle" id="cerrarDetallesEmpleado" onclick="mostrarDetallesEmpleado(false)"></i>
+    <div class="row" style="height: 100%">
+        <div class="col-xs-4" style="background-color: #70a1ff; height: 100%">
+            <br>
+            <img src="{% static 'img/card-Tecnico 01.jpg' %}" alt="" class="img-circle img-responsive">
+            <br>
+            <p class="texto-centrado">Nombre</p>
+            <p class="texto-centrado">Hora de entrada</p>
+            <p class="texto-centrado">Sueldo base</p>
+            <p class="texto-centrado">Bono por puntalidad</p>
+            <p class="texto-centrado">Bono por objetivos</p>
+            <p class="texto-centrado">Acumulado</p>
+        </div>
+        <div class="col-xs-8" style="height: 100%; padding-top: 25px">
+            <div id="tabla-resumen-incentivos" style="height: 40%; max-height: 40%; overflow: scroll">
+                <table class="table">
+                    <tr style="background-color: #bdc3c7">
+                        <th>Fecha</th>
+                        <th>Dia</th>
+                        <th>Entrada</th>
+                        <th>Sesion</th>
+                        <th>Bono</th>
+                    </tr>
+                </table>
+            </div>
+            <div id="tabla-resumen-objetivos" style="height: 40%;max-height: 40%; overflow: scroll">
+                <table class="table">
+                    <tr style="background-color: #bdc3c7">
+                        <th>Articulo</th>
+                        <th>Objetivo</th>
+                        <th>Vendidos</th>
+                        <th>Bono</th>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>

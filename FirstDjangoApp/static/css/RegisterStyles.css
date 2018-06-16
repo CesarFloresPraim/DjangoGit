@@ -1,0 +1,71 @@
+html{
+    width: 100%;
+    height: 100%;
+    padding-top: 55px;
+}
+body{
+    background: url("../img/bg-register.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+.form-register{
+    width: 95%;
+    max-width: 500px;
+    margin: auto;
+    background-color: #c8d6e5b6;
+    border-radius: 7px;
+}
+#titulo{
+    text-align: center;
+    padding:  10px 10px;
+    background: #8396a7d2;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    color: white;
+}
+
+.contenedor-inputs{
+    padding:  10px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+input{
+    margin: 5px 0 5px 0;
+    background: #f1f1f1;
+    border: none;
+    padding: 15px;
+}
+.input45 {
+    width: 45%;
+  }
+.input96 {
+    width: 100%;
+}
+
+label{
+      width: 100%;
+}
+
+.contenedor-botones{
+    padding:  10px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cancelbtn, .signupbtn{
+    background: #ff9f43;
+    margin: auto;
+    padding: 10px 40px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    border-bottom:  4px solid #feca57;
+}
+
+.cancelbtn:hover, .signupbtn:hover{
+    transform: scale(1.05)
+}

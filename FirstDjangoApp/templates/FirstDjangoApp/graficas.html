@@ -1,0 +1,23 @@
+<form action="{% url 'FirstDjangoApp:datos_graficas' %}" method="get" id="ver-graficas">
+    {% csrf_token %}
+    <button type="submit">Mostrar graficas</button>
+
+    <select name="datos_a_graficar">
+        <option value="ganancias">Ganancias</option>
+        <option value="numero_ventas">Numero de ventas</option>
+    </select>
+    <select name="tipo_grafica">
+        <option value="line">Lineas</option>
+        <option value="bar">Barras</option>
+        <option value="radar">Radar</option>
+        <option value="doughnut">Dona</option>
+        <option value="polarArea">Area polar</option>
+    </select>
+    <i class="fas fa-calendar" id="calendar"></i>
+    <input type="text" name="fecha_inicio" id="datepicker1" size="12" placeholder="Fecha-Inicio">
+    <i class="fas fa-calendar" id="calendar"></i>
+    <input type="text" name="fecha_fin" id="datepicker2" size="12" placeholder="Fecha-Fin">
+</form>
+<div id="charts">
+   <canvas id="myChart" class="canvas-fix"></canvas>
+</div>

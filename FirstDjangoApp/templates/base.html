@@ -1,0 +1,17 @@
+<html lang="en">
+{% load staticfiles %}
+    <head>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    {% block styles %}
+    {% endblock %}
+    <meta charset="UTF-8" content="width=device-width, initial-scale=1.0">
+    {% block head %}
+        <title>Base</title>
+    {% endblock %}
+    </head>
+<body>
+{% block body %}
+
+{% endblock %}
+</body>
+</html>

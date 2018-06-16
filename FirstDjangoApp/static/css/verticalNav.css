@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Josefin+Sans|Ubuntu+Mono');
+@import url('https://fonts.googleapis.com/css?family=Lora');
+@import url('https://fonts.googleapis.com/css?family=Bad+Script');
+@import url('https://fonts.googleapis.com/css?family=Farsan');
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
+
+html,
+body {
+    background: #efefef;
+    font-family: 'Cutive Mono', monospace;
+    width: 100%;
+    height: 100%;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navbar {
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    width: 100%;
+    background-color: rgba(29, 33, 32, 1);
+    height: 60px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+li {
+    font-size: 15px;
+    float: right;
+    text-decoration: none;
+}
+
+li a:link {
+    padding-left: 5px;
+    padding-right: 5px;
+    text-decoration: none;
+    height: 60px;
+    text-align: center;
+
+}
+
+.color_white {
+    color: white;
+}
+
+#userPic, #logoPic {
+    max-height: 50px;
+    margin-top: 3px;
+    margin-right: 10px;
+}
+
+/********************\
+  $Layout ☰
+\********************/
+
+/*Damos estilos al menú*/
+.nav {
+    overflow: scroll;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    background-color: rgba(29, 33, 32, 1);
+    width: 200px;
+
+}
+
+/*Estilos de los li del menú*/
+.nav__item, #salir {
+    display: block;
+    width: 100%;
+    margin: 0;
+    height: 60px;
+    padding: 15px;
+    position: relative;
+    border-bottom: .5px solid rgba(59, 62, 61, 1);
+    border-top: .5px solid rgba(59, 62, 61, 1);
+    background-color: transparent;
+    font-size: 20px;
+    text-align: left;
+    color: rgba(221, 231, 228, 1);
+}
+
+.top_nav_item {
+    background-color: #33d9b2;
+    padding: 0;
+    padding-bottom: 2px;
+    text-align: center;
+}
+
+.espacio {
+    height: 100%;
+}
+
+.nav__item:link {
+    text-decoration: none;
+}
+
+#salir {
+    color: #E51A4C;
+    margin: 0;
+    border: 0;
+}
+
+.container-principal {
+    position: absolute;
+    padding: 10px;
+    margin-left: 210px; /*Cambiado por javascript*/
+    margin-top: 70px;
+    background-color: rgba(207, 205, 211, 0.2);
+    overflow: scroll;
+}
+
+/*Estilos inicio*/
+.cuadro_inicio {
+    position: relative;
+    z-index: 3;
+    border-radius: 20px;
+    width: 70%;
+
+}
+
+#cuadro1, #cuadro2, #cuadro3 {
+    float: left;
+    background-color: #FFC312;
+    text-align: center;
+    color: black;
+    font-size: 50px;
+    padding: 10px;
+    font-family: 'Farsan', cursive;
+    margin-bottom: 20px;
+}
+
+.autor_frase {
+    background-color: red;
+    font-size: 20px;
+    text-align: right;
+    margin-bottom: 0;
+}
+
+#cuadro2 {
+    display: block;
+    float: right;
+    background-color: #12CBC4;
+}
+
+#cuadro3 {
+    float: left;
+    background-color: #ED4C67;
+}
+
+/* Estilos de Ventas*/
+
+#calendar {
+    background-color: transparent;
+    font-size: 20px;
+}
+
+#ver_ventas {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+#ventas_actuales {
+    overflow: auto;
+}
+
+.thventas, .tharticulos, .thincentivo, .thhora-entrada {
+    background-color: #33d9b2;
+}
+
+.tharticulos-mod {
+    background-color: #c7ecee;
+}
+
+/*Estilos de Tienda*/
+.input_ajuste {
+    max-width: 100%;
+    width: 100%;
+}
+
+.button-ajuste {
+    max-height: 100%;
+    height: 100%;
+}
+
+.button-ajuste:hover {
+    background: rgba(217, 0, 9, 0.2);
+}
+
+.ajuste-ancho-columna10 {
+    padding: 0;
+    width: 10%;
+}
+
+.ajuste-ancho-columna60 {
+    width: 60%;
+}
+
+.rojoCosto {
+    background: rgba(231, 76, 60, 0.6);
+}
+
+.verdePrecio {
+    background: rgba(46, 204, 113, 0.6);
+}
+
+.elementos-ventas {
+    padding: 10px;
+    height: 50px;
+    max-height: 50px;
+    background-color: rgba(13, 85, 91, 0.62);
+}
+
+.left-ventas {
+    padding: 0;
+    height: 100%;
+}
+
+.right-ventas {
+    padding: 0;
+    height: 100%;
+    text-align: center;
+}
+
+.tamanio-imagen {
+    max-height: 180px;
+    min-height: 180px;
+    max-width: 180px;
+    min-width: 180px;
+    height: 180px;
+    width: 180px;
+    margin-right: 25px;
+}
+
+.tamanio-imagen:hover {
+    transform: scale(1.05);
+}
+
+.polar-abajo {
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 15px;
+    padding: 5px;
+    vertical-align: middle;
+}
+
+.sin-margin-bot {
+    margin-bottom: 0;
+}
+
+#articulos-encontrados {
+    padding-left: 20px;
+    padding-top: 20px;
+    overflow: auto;
+}
+
+.canvas-fix {
+
+}
+
+.p-card {
+    padding: 10px;
+    background-color: #f5f6fa;
+}
+
+.down-card {
+    background-color: #dcdde1;
+    width: 100%;
+    height: auto;
+}
+
+#detalles-empleado {
+    height: 70%;
+    width: 70%;
+    background-color: #dcdde1;
+    opacity: .9;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#cerrarDetallesEmpleado{
+    color: #e74c3c;
+    opacity: .9;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 25px;
+    z-index: 2;
+
+}
+
+.texto-centrado{
+    text-align: center;
+}

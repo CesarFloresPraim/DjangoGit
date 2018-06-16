@@ -1,0 +1,28 @@
+<form method="get" action="{% url 'FirstDjangoApp:buscar' %}" id="buscar-venta">
+    {% csrf_token %}
+    <i class="fas fa-calendar" id="calendar"></i>
+    <input type="text" name="fecha" id="datepicker" size="12" placeholder="Fecha">
+    <button type="submit" id="ver_ventas" value="buscar" onclick="ajustarAlturaVentas()">Nueva</button>
+</form>
+
+<div id="ventas_actuales">
+
+</div>
+<div id="calculos" style="display: block; text-align: right; position: absolute; bottom: 0; right: 0">
+    <div style="display: block; text-align: right">
+        <label for="precio_show">Total Precio:</label>
+        <input type="text" name="precio_show" id="precio_show" readonly placeholder="" style="background: rgba(46,204,113,0.6)">
+    </div>
+    <div style="display: block; text-align: right">
+        <label for="costo_show">Total Costo:</label>
+        <input type="text" name="costo_show" id="costo_show" readonly placeholder="" style="background: rgba(231,76,60,0.6)">
+    </div>
+        <div style="display: block; text-align: right">
+        <label for="costo_show">Total:</label>
+        <input type="text" name="total_show" id="total_show" readonly placeholder="" style="background: rgba(241,196,15,0.67)">
+    </div>
+</div>
+
+
+
+

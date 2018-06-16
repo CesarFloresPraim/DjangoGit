@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block head %}
+    <title>Registro</title>
+{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/RegisterStyles.css'%}">
+{% endblock %}
+{% block body %}
+    <form class="form-register" method="post">
+    {% csrf_token %}
+            <h1 id="titulo">Registro de Usuarios</h1>
+            <div class="contenedor-inputs">
+                {{ form.non_field_errors }}
+                {{ form.usuario.errors }}
+                <b style="width: 100%">{{ form.usuario.label_tag }}</b>
+                {{ form.usuario }}
+                {{ form.contrasenia1.errors }}
+                <b style="width: 100%">{{ form.contrasenia1.label_tag }}</b>
+                {{ form.contrasenia1 }}
+                <input id="id_contrasenia2" type="password" class="input45" placeholder="Escribir Contraseña" name="psw_repeat" required>
+                {{ form.email.errors }}
+                <b style="width: 100%">{{ form.email.label_tag }}</b>
+                {{ form.email }}
+                {{ form.celular.errors }}
+                <b style="width: 100%">{{ form.celular.label_tag }}</b>
+                {{ form.celular }}
+                {{ form.hora_entrada.errors }}
+                <b style="width: 100%">{{ form.hora_entrada.label_tag }}</b>
+                {{ form.hora_entrada }}
+                {{ form.salario.errors }}
+                {{ form.salario }}
+                {{ form.tipoerrors }}
+                <b style="width: 100%">{{ form.tipo.label_tag }}</b>
+                {{ form.tipo }}
+            </div>
+
+            <hr>
+            <div class="contenedor-botones">
+              <button type="button" class="cancelbtn">Cancelar</button>
+              <button type="submit" class="signupbtn">Registrarse</button>
+            </div>
+    </form>
+{% endblock %}

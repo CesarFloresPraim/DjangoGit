@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block head %}
+    <title>Autenticacion</title>
+{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/AuthenticationStyles.css' %}">
+    <script defer src="{% static 'js/fontawesome-all.js' %}"></script>
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <img class="usuario" src="{% static 'img/man.png' %}" alt="Imagen de usuario">
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-input">
+                <i class="fa fa-user-circle icon" aria-hidden="true" style="font-size: 45px;"></i>
+                <input type="text" name="usuario" placeholder="Usuario" autocomplete="off" required>
+            </div>
+            <div class="form-input">
+                <i class="fa fa-lock icon" aria-hidden="true" style="font-size: 45px;"></i>
+                <input type="password" name="contrasenia" placeholder="Contraseña">
+            </div>
+            <input type="submit" name="iniciar" value="Login" class="btn-login" autocomplete="off">
+        </form>
+        <br>
+        <a href="#">¿Olvidaste la contraseña?</a>
+    </div>
+{% endblock %}
